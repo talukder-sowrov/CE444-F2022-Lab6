@@ -75,6 +75,7 @@ def test_messages(client):
     assert b"&lt;Hello&gt;" in rv.data
     assert b"<strong>HTML</strong> allowed here" in rv.data
 
+
 def test_delete_message(client):
     """Ensure the messages are being deleted"""
     rv = client.get("/delete/1")
@@ -85,6 +86,7 @@ def test_delete_message(client):
     data = json.loads(rv.data)
     assert data["status"] == 1
 
+
 def test_search(client):
     """Ensure search functionality works properly"""
     login(client, app.config["USERNAME"], app.config["PASSWORD"])
@@ -93,5 +95,5 @@ def test_search(client):
         data=dict(title="test", text="<strong>HTML</strong> allowed here"),
         follow_redirects=True,
     )
-    rv = client.get('/search/?query=test')
+    rv = client.get("/search/?query=test")
     assert b"test" in rv.data
