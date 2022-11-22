@@ -1,1 +1,12 @@
-# CE444-F2022-Lab6
+# ECE444-F2022-Lab6
+
+## Project Test Cases
+
+Test Mapping Values: https://github.com/ECE444-2022Fall/project-1-web-application-design-education-pathways-group-19-omega/blob/main/Education_Pathways/tests/app_test.py#L14
+
+Test Mapping has No Values: https://github.com/ECE444-2022Fall/project-1-web-application-design-education-pathways-group-19-omega/blob/main/Education_Pathways/tests/app_test.py#L46
+
+## Pros and Cons of TDD
+There are many pros and cons to Test Driven Development (TDD) in software engineering. One of the first pros of TDD is how TDD leads to more modularized code. The easiest way to write unit tests is to have one function take a given input and then produce an output that matches that input. This would follow and software design principle where every function should only do one thing. When unit tests are written first, there is a much smaller chance that a function would have multiple functionalities because it would not make sense to write a test in that way before any code was written. For this reason, TDD supports more modular function writing. Another pro of TDD is that there is not much wasted effort in a developer’s code trying to do too many things that are unnecessary for an application. In TDD, unit tests will only be written for functionality that is necessary for an application.  In testing, the focus is on the scenario and output, and how those scenarios and outputs link together leads to the functional requirements that are being developed. This focus leads to developers writing code that fits with this scenario to output style. Code becomes much more straightforward because TDD helps to eliminate chances that a developer writes code that is unnecessary for a feature, and so saving effort.
+
+One con of TDD is that a large amount of time needs to be spent to make sure that the test suite is maintained over time. This can become much more difficult as a project grows and more tests need to be written whenever a new feature must be added. This can slow down development which could be detrimental especially if a feature must be release as soon as possible. Another con that can come out of TDD is that some tests are written for trivial code where a unit test may not be necessary. Because some unit tests are written before code is written, there is a much larger possibility that a developer may try to cover as much cases as possible to the point where some tests are not needed. While it is always good to have unit tests for functions, there are tradeoffs that can happen in terms of speed when tests are written for every function. 
